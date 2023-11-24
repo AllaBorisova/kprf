@@ -1,0 +1,25 @@
+.search {
+  &__form {
+    position: relative;
+  }
+  &__button {
+    @include wh(4.6rem);
+    @include flexcc;
+    background: none;
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    svg {
+      @include wh(2.1rem);
+    }
+  }
+  &__input {
+    border-radius: 1.6rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    height: 4.6rem;
+    padding-left: 5.5rem;
+    padding-right: 2.9rem;
+  }
+}

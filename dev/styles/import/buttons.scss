@@ -1,0 +1,109 @@
+.button {
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+  text-decoration: none;
+  display: flex;
+  padding: 1.6rem 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  @include tr;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: normal;
+  background: $color-primary;
+  border-radius: 1.5rem;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &_full {
+    width: 100%;
+  }
+  &_show-more {
+    height: 5.6rem;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0 7.6rem;
+    border-radius: 3.1rem;
+    background: #67a3da;
+    @media (max-width: 480px) {
+      width: 100%;
+      padding: 0 3rem;
+    }
+  }
+  &_submit {
+    border-radius: 8.1rem;
+    background: #222;
+    height: 5.5rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 0 6.2rem;
+    @media (max-width: 480px) {
+      width: 100%;
+      padding: 0 2rem;
+    }
+  }
+  &_light {
+    color: $color-text;
+    background: #fff;
+  }
+
+  &_bordered {
+    background: none;
+    border: 1px solid $color-primary;
+    color: #fff;
+  }
+  &_colors {
+    background: linear-gradient(180deg, #f25e0b 0%, #cc4900 100%);
+    border: none;
+    color: #fff;
+  }
+  &_product-buy {
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #f25e0b 0%, #cc4900 100%);
+    color: #fff;
+    width: 30rem;
+    @media (max-width: 380px) {
+      width: 100%;
+      padding: 0;
+    }
+    svg {
+      @include wh(2.4rem);
+    }
+  }
+  &_product-order {
+    width: 30rem;
+    @media (max-width: 380px) {
+      width: 100%;
+    }
+  }
+  &_add-comment {
+    border-radius: 1rem;
+    background: #e35200;
+    padding: 0 1.1rem;
+    height: 3.8rem;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}
+.button-callback {
+  font-size: 1.6rem;
+  font-weight: 600;
+  @include tr;
+  height: 3.8rem;
+  padding: 0 1.5rem;
+  color: #000;
+  border: 1px solid $color-primary;
+  background: none;
+  @include flexcc;
+  border-radius: 1rem;
+  &:hover {
+    background: $color-primary;
+    color: #fff;
+  }
+}

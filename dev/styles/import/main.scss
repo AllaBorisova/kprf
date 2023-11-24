@@ -1,0 +1,124 @@
+.info-sale {
+  padding: 2rem 0;
+  background: #101212;
+  color: $color-primary;
+  text-align: center;
+}
+.section-top {
+  padding-top: 10rem;
+  padding-bottom: 6.2rem;
+  background-image: url(../img/main-top-bg.jpg);
+  @include bg-img;
+  @media (max-width: 480px) {
+    padding: 6rem 0;
+  }
+  .main__title {
+    text-align: center;
+    margin-bottom: 6rem;
+    @media (max-width: 480px) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+.section-business {
+  background-image: url(../img/main-top-business.jpg);
+  @include bg-img;
+  padding-top: 9rem;
+  min-height: 85rem;
+  text-align: center;
+  @media (max-width: 992px) {
+    min-height: auto;
+    padding-bottom: 9rem;
+  }
+  .main__title {
+    margin-bottom: 3rem;
+  }
+  &-text {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+}
+.section-categories {
+  &-items {
+    display: grid;
+    grid-template-columns: 36% auto 36%;
+    text-align: center;
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-text {
+    color: #fff;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.75s ease;
+
+    @media (max-width: 992px) {
+      height: auto;
+      opacity: 1;
+    }
+  }
+  .main__title {
+    transition: all 0.75s ease;
+    span {
+      display: block;
+    }
+  }
+  .button {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.75s ease;
+    @media (max-width: 992px) {
+      height: 5.6rem;
+      opacity: 1;
+    }
+  }
+  &-item {
+    min-height: 95rem;
+    @include bg-img;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+
+    justify-content: flex-start;
+    padding-top: 30rem;
+    transition: all 0.75s ease;
+    @media (max-width: 992px) {
+      min-height: auto;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+    @media (max-width: 992px) {
+      gap: 2rem;
+    }
+    &:nth-child(1) {
+      background-image: url(../img/category1.jpg);
+    }
+    &:nth-child(2) {
+      background-image: url(../img/category2.jpg);
+    }
+    &:nth-child(3) {
+      background-image: url(../img/category3.jpg);
+    }
+    &:hover {
+      // gap: 4rem;
+      .section-categories-text {
+        height: auto;
+        opacity: 1;
+        margin-top: 4rem;
+      }
+      .button {
+        height: 5.6rem;
+        opacity: 1;
+        margin-top: 4rem;
+      }
+    }
+  }
+}

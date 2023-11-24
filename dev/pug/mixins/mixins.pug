@@ -1,0 +1,86 @@
+mixin expedition__event(imgsrc, name, date)
+	a.expedition__event(href="")
+		.expedition__event-img(style='background-image:url(./img/' + imgsrc +')')
+		.expedition__event-desc
+			.expedition__event-name= name
+			.expedition__event-date= date
+
+mixin education__event(imgsrc, name, date)
+	a.education__event(href="")
+		.education__event-img(style='background-image:url(./img/' + imgsrc +')')
+		.education__event-name= name
+		.education__event-date= date
+		
+mixin education__item(imgsrc, name, date)
+	a.education__item(href="")
+		.education__item-img(style='background-image:url(./img/' + imgsrc +')')
+		.education__item-name= name
+		.education__item-date= date
+
+//- mixin product-card(imgsrc, name, price)
+//- 	.catalog__item
+//- 		a.compare(href="")
+//- 			+svg('compare-product')
+//- 		a.favorite(href="")
+//- 			+svg('favorite')
+//- 		a.catalog__img(style='background-image:url(./img/' + imgsrc +')')
+//- 		.catalog__rating.rating
+//- 			.rating__stars 
+//- 			.rating__value 5,0
+//- 		a.catalog__name(href="")= name
+//- 		.catalog__buttons
+//- 			.catalog__price= price
+//- 				span руб.
+//- 			a.button_to-cart(href="")
+//- mixin product-card-active(imgsrc, name, price)
+//- 	.catalog__item
+//- 		a.compare.active(href="")
+//- 			+svg('compare-product')
+//- 		a.favorite.active(href="")
+//- 			+svg('favorite')
+//- 		a.catalog__img(style='background-image:url(./img/' + imgsrc +')')
+//- 		.catalog__rating.rating
+//- 			.rating__stars.rating__stars-4
+//- 			.rating__value 4,0
+//- 		a.catalog__name(href="")= name
+//- 		.catalog__buttons
+//- 			.catalog__price= price
+//- 				span руб.
+//- 			a.button_to-cart.in-cart(href="")
+
+mixin list-links (...items)
+	ul
+		each item in items
+			li
+				a(href="")= item
+mixin list (...items)
+	ul
+		each item in items
+			li= item
+mixin custom-checkbox(text)
+	label.custom-checkbox
+		input.custom-checkbox__checkbox(type="checkbox" name="")
+		span.custom-checkbox__span
+		span.custom-checkbox__label= text
+//- mixin custom-checkbox_orange(text)
+//- 	label.custom-checkbox.custom-checkbox_orange
+//- 		input.custom-checkbox__checkbox(type="checkbox" name="")
+//- 		span.custom-checkbox__span
+//- 		span.custom-checkbox__label= text
+mixin svg(name)
+	svg&attributes(attributes)
+		use(xlink:href=`./img/sprite.svg#${name}`)
+mixin news(imgsrc, category, name, preview, views)
+	.news__item
+		a.news__img(style='background-image:url(./img/' + imgsrc +')')
+		.news__desc
+			.accent-category.news__category= category
+			a.news__name(href="")= name
+			.news__preview= preview
+			.news__views
+				+svg("eye")
+				span= views
+//- mixin switch 
+//- 	label.switch
+//- 		input(type="checkbox")
+//- 		span.switch__slider

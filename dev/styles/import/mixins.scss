@@ -1,0 +1,45 @@
+@mixin tr {
+  transition: all 0.25s ease;
+}
+@mixin bg-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@mixin ul-clean {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@mixin flexcc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-center-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-center-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@mixin flex-top-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@mixin flex-top-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+@mixin wh($size) {
+  width: $size;
+  height: $size;
+}
+@mixin filter-to-white {
+  filter: brightness(0) invert(1);
+}
