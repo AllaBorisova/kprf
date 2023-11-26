@@ -1,13 +1,255 @@
 main.main
-	//- .section 
-	//- 	.container 
-	//- 		.h2.section__title Лента
-	//- 			+svg('red-arrow')
-	//- 		.section__items 
-	//- 			a.section-item(href="")
-	//- 				.section-item__img(style="background-image:url(../img/section-photo1.png)") 
-	//- 					.section-item__date 29 мая 2023
-	//- 				.section-item__desc 
-	//- 					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
-	//- 					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+	.main-slider
+		- for (var x = 0; x < 5; x++)
+			.main-slider__slide(style="background-image:url(./img/slide.jpg)")
+				.main-slider__title Торжественно открыт памятник Егору Лигачёву
+				.main-slider__text На Троекуровском кладбище в Москве состоялось открытие памятника Егору Лигачёву, более 17 лет возглавлявшему Томскую область.
 
+
+	.section.section_lenta
+		.container 
+			.h2.section__title Лента
+				+svg('red-arrow')
+			.section__items.section__items_4
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img.section-item__img_video(style="background-image:url(../img/section-photo2.png)") 
+					.section-item__name Павел Грудинин: Мы на пороге великих перемен!
+					.section-item__other-date 03 апреля 2018
+				a.section-item(href="")
+					.section-item__img.section-item__img_video(style="background-image:url(../img/section-photo2.png)") 
+					.section-item__name Павел Грудинин: Мы на пороге великих перемен!
+					.section-item__other-date 03 апреля 2018
+				a.section-item(href="")
+					.section-item__img.section-item__img_articles(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img.section-item__img_articles(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной 
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+	.section.section_deputat
+		.container 
+			.h2.section__title Депутатский центр
+				+svg('red-arrow')
+			.section__items.section__items_3
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img.section-item__img_video(style="background-image:url(../img/section-photo2.png)") 
+					.section-item__name Павел Грудинин: Мы на пороге великих перемен!
+					.section-item__other-date 03 апреля 2018
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img.section-item__img_video(style="background-image:url(../img/section-photo2.png)") 
+					.section-item__name Павел Грудинин: Мы на пороге великих перемен!
+					.section-item__other-date 03 апреля 2018
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+	.section.section_tomsk
+		.container 
+			.h2.section__title Томский комсомол
+				+svg('red-arrow')
+			.section__items.section__items_4
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img.section-item__img_video(style="background-image:url(../img/section-photo2.png)") 
+					.section-item__name Павел Грудинин: Мы на пороге великих перемен!
+					.section-item__other-date 03 апреля 2018
+				a.section-item(href="")
+					.section-item__img.section-item__img_video(style="background-image:url(../img/section-photo2.png)") 
+					.section-item__name Павел Грудинин: Мы на пороге великих перемен!
+					.section-item__other-date 03 апреля 2018
+	.section.section_mestn
+		.container 
+			.h2.section__title Местные отделения
+				+svg('red-arrow')
+			.section__items.section__items_3
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img.section-item__img_video(style="background-image:url(../img/section-photo2.png)") 
+					.section-item__name Павел Грудинин: Мы на пороге великих перемен!
+					.section-item__other-date 03 апреля 2018
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img.section-item__img_video(style="background-image:url(../img/section-photo2.png)") 
+					.section-item__name Павел Грудинин: Мы на пороге великих перемен!
+					.section-item__other-date 03 апреля 2018
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+	.section.section_video
+		.container 
+			.h2.section__title Видео
+				+svg('red-arrow')
+			.section__items.section__items_4
+				a.section-item(href="")
+					.section-item__img.section-item__img_video(style="background-image:url(../img/section-photo2.png)") 
+					.section-item__name Павел Грудинин: Мы на пороге великих перемен!
+					.section-item__other-date 03 апреля 2018
+				a.section-item(href="")
+					.section-item__img.section-item__img_video(style="background-image:url(../img/section-photo2.png)") 
+					.section-item__name Павел Грудинин: Мы на пороге великих перемен!
+					.section-item__other-date 03 апреля 2018
+				a.section-item(href="")
+					.section-item__img.section-item__img_video(style="background-image:url(../img/section-photo2.png)") 
+					.section-item__name Павел Грудинин: Мы на пороге великих перемен!
+					.section-item__other-date 03 апреля 2018
+				a.section-item(href="")
+					.section-item__img.section-item__img_video(style="background-image:url(../img/section-photo2.png)") 
+					.section-item__name Павел Грудинин: Мы на пороге великих перемен!
+					.section-item__other-date 03 апреля 2018
+	.section.section_photo
+		.container 
+			.h2.section__title Фото
+				+svg('red-arrow')
+			.section__items.section__items_3
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+					.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+	.section.section_articles
+		.container 
+			.h2.section__title Статьи
+				+svg('red-arrow')
+			.section__items.section__items_4
+				a.section-item(href="")
+					.section-item__img.section-item__img_articles(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img.section-item__img_articles(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img.section-item__img_articles(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+				a.section-item(href="")
+					.section-item__img.section-item__img_articles(style="background-image:url(../img/section-photo1.png)") 
+						.section-item__date 29 мая 2023
+					.section-item__name 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+	.section.section_pressa
+		.container 
+			.h2.section__title Наша пресса
+				+svg('red-arrow')
+			.section__items.section__items_5
+				- for (var x = 0; x < 10; x++)
+					a.section-item(href="")
+						.section-item__img.section-item__img_pressa(style="background-image:url(../img/section-photo3.png)") 
+						.section-item__name 27 мая 2023
+	.section.section_library
+		.container 
+			.h2.section__title Библиотека
+				+svg('red-arrow')
+			.section__items.section__items_4
+				- for (var x = 0; x < 4; x++)
+					a.section-item(href="")
+						.section-item__img.section-item__img_library(style="background-image:url(../img/section-photo3.png)") 
+						.section-item__name 27 мая 2023
+	.section-links
+		.container
+			a.section-link(href="") 
+				span Сайт ЦК
+					+svg('red-arrow')
+			a.section-link(href="") 
+				span “Красная линия”
+					+svg('red-arrow')
+			a.section-link(href="")
+				span “Советская Россия”
+					+svg('red-arrow')
+			a.section-link(href="")
+				span Газета “Правда”
+					+svg('red-arrow')
+	.section-internet 
+		.container 
+			.h2.section-internet__title Интернет-приемная
+			.section-internet__text Если вы хотите быть в курсе важных событий реготделения, обратиться за помощью к депутату КПРФ  или вступить в партию, заполните соответствующую форму ниже:
+			.tabs 
+				ul 
+					li Подписаться на новости
+					li Обратиться к депутату
+					li Вступить в КПРФ
+				div 
+					div 
+						form(action="" method="")
+							.form 
+								.form__block 
+									input.form__input(type="text" placeholder="ФИО")
+								.form__block 
+									input.form__input(type="tel" placeholder="Телефон")
+								.form__block 
+									input.form__input(type="email" placeholder="E-mail")
+								textarea.form__textarea(placeholder="Текст сообщения")
+								input.form__submit(type="submit" value="Отправить")
+					div 
+					div

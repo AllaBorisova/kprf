@@ -147,6 +147,13 @@ textarea {
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 3rem;
+  svg {
+    width: 1.8rem;
+    height: 2.8rem;
+    @media (max-width: 992px) {
+      height: 2rem;
+    }
+  }
 
   @media (max-width: 992px) {
     font-size: 2.5rem;
@@ -155,6 +162,7 @@ textarea {
 }
 .main {
   flex: 1;
+  overflow: hidden;
   p {
     font-size: 1.8rem;
     line-height: 1.5;
@@ -229,48 +237,52 @@ textarea {
   ul {
     @include ul-clean;
     display: flex;
+    justify-content: space-between;
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
     position: relative;
+    gap: 1rem;
+    margin-bottom: 8rem;
+    @media (max-width: 767px) {
+      margin-bottom: 2rem;
+    }
 
     &::-webkit-scrollbar {
       display: none;
       width: 0 !important;
     }
     li {
-      padding: 2.2rem 2.5rem;
+      padding: 2.6rem 4rem;
       font-size: 2rem;
       line-height: 1em;
       @include tr;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 1.6rem;
-      &.active {
-        // background: #fff;
-        // font-weight: 700;
+      font-size: 4.3rem;
+      font-family: $font-second;
+      border-radius: 4rem;
+      background: rgba(0, 0, 0, 0.05);
+      color: $color-primary;
+      &.active,
+      &:hover {
+        background: $color-primary;
+        color: #fff;
       }
       @media (max-width: 992px) {
         // width: 50%;
       }
       @media (max-width: 767px) {
-        // padding: 1rem 2rem;
-        // font-size: 1.4rem;
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+        border-radius: 2rem;
       }
     }
   }
   > div {
-    padding: 3rem;
-    font-size: 1.8rem;
-    line-height: 2.5rem;
-    background: #f3f3f3;
-    position: relative;
-
     @media (max-width: 767px) {
       padding: 2rem;
       font-size: 1.4rem;
-      line-height: 1.2em;
+      line-height: 1.2;
     }
     p {
       margin-bottom: 1rem;
@@ -326,21 +338,60 @@ textarea {
 *:hover > .fa-hover-show {
   display: inline-block;
 }
-.swiper-wrapper {
-}
-.swiper-button-prev,
-.swiper-button-next {
-  width: 4.6rem;
-  height: 4.6rem;
-
-  svg {
-    width: 4.6rem;
-    height: 4.6rem;
+.slick-slide {
+  margin: 0 5rem;
+  @include tr;
+  opacity: 0.3;
+  &.slick-current {
+    opacity: 1;
+  }
+  @media (max-width: 992px) {
+    margin: 0;
   }
 }
-.swiper-button-prev {
+.slick-dots {
+  @include ul-clean;
+  @include flexcc;
+  gap: 1rem;
+  position: absolute;
+  bottom: 2.6rem;
+  width: 100%;
   left: 0;
 }
-.swiper-button-next {
-  right: 0;
+.slick-dots button {
+  @include wh(1rem);
+  border-radius: 50%;
+  background: #fbf7f7;
+  opacity: 0.3;
+  @include tr;
+  font-size: 0;
+  padding: 0;
+}
+.slick-dots .slick-active button {
+  opacity: 1;
+}
+.slick-prev,
+.slick-next {
+  width: 2rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5rem;
+  font-size: 0;
+  z-index: 5;
+  opacity: 0.5;
+  @include tr;
+  &:hover {
+    opacity: 1;
+  }
+}
+.slick-prev {
+  left: 50%;
+  margin-left: -60rem;
+  background: url(../img/arrow-left.svg) center no-repeat;
+}
+.slick-next {
+  right: 50%;
+  margin-right: -60rem;
+  background: url(../img/arrow-right.svg) center no-repeat;
 }
