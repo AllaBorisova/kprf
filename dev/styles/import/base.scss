@@ -118,23 +118,8 @@ textarea {
 .text-bold {
   font-weight: bold;
 }
-.h1 {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 2.5rem;
-  font-size: 7rem;
-  line-height: normal;
-  font-weight: bold;
-  span {
-    color: $color-primary;
-  }
 
-  @media (max-width: 767px) {
-    font-size: 3.5rem;
-    margin-top: 1.4rem;
-    margin-bottom: 2.6rem;
-  }
-}
+.h1,
 .h2 {
   margin: 0;
   padding: 0;
@@ -154,10 +139,29 @@ textarea {
       height: 2rem;
     }
   }
+  &_border {
+    padding-bottom: 6rem;
+    margin-bottom: 6rem;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 12.7rem;
+      background: $color-primary;
+      height: 1px;
+    }
+  }
 
   @media (max-width: 992px) {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    &_border {
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+    }
   }
 }
 .main {
@@ -175,48 +179,45 @@ textarea {
 
 .breadcrumbs {
   line-height: 1em;
-  padding-top: 3rem;
-  padding-bottom: 4.6rem;
+
+  padding-bottom: 15rem;
   @media (max-width: 767px) {
-    padding: 1.4rem 0px;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
   }
   ul {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     @include ul-clean;
     max-width: 100%;
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
     align-items: center;
+    font-size: 2.2rem;
+
+    font-weight: 400;
+    line-height: normal;
     &::-webkit-scrollbar {
       display: none;
       width: 0 !important;
     }
     @media (max-width: 767px) {
-      gap: 0.5rem;
+      gap: 1rem;
     }
     li {
       white-space: nowrap;
+      color: rgba(63, 55, 64, 0.3);
+      padding-right: 2rem;
+      &:not(:last-child) {
+        border-right: 1px solid rgba(63, 55, 64, 0.3);
+      }
       a {
         display: block;
-        color: inherit;
+        color: $color-text;
+        cursor: pointer;
         &:hover {
           text-decoration: underline;
-        }
-      }
-      svg {
-        @include wh(1.3rem);
-        fill: #ededed;
-      }
-
-      span {
-        color: inherit;
-        display: block;
-        font-weight: bold;
-        &.breadcrumbs_divider {
-          color: $color-primary;
-          font-weight: 400;
         }
       }
     }
@@ -327,7 +328,12 @@ textarea {
     }
   }
 }
-
+.three-arrows {
+  svg {
+    width: 2.5rem;
+    height: 1.5rem;
+  }
+}
 /*show-hide hover fontawesome*/
 * > .fa-hover-show,
 *:hover > .fa-hover-hidden,
@@ -394,4 +400,33 @@ textarea {
   right: 50%;
   margin-right: -60rem;
   background: url(../img/arrow-right.svg) center no-repeat;
+}
+.pagination {
+  margin-top: 10rem;
+  @media (max-width: 767px) {
+    margin-top: 5rem;
+  }
+  ul {
+    @include ul-clean;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    a {
+      @include tr;
+      &:hover,
+      &.active {
+        color: $color-primary;
+      }
+      &.active {
+        font-weight: 500;
+        color: $color-primary;
+      }
+    }
+  }
 }

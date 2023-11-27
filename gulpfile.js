@@ -10,6 +10,7 @@ const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const pug = require('gulp-pug');
 const svgSprite = require('gulp-svg-sprite');
+const imagemin = require('gulp-imagemin');
 
 const cleanBuild = () => {
   return gulp
@@ -68,23 +69,6 @@ const scripts = () => {
   );
 };
 
-const watchAll = () => {
-  gulp.watch('./dev/pug/**/*.pug', html);
-  gulp.watch('./dev/styles/**/*.scss', styles);
-  gulp.watch('./dev/scripts/**/*.js', scripts);
-};
-
-// gulp.task("watch", function () {
-//   watch("./dev/index.html", gulp.parallel(browserSync.reload));
-// });
-
-// gulp.task("server", function () {
-//   browserSync.init({
-//     server: {
-//       baseDir: "./dev/",
-//     },
-//   });
-// });
 const server = () => {
   browserSync.init({
     server: {
@@ -93,12 +77,14 @@ const server = () => {
   });
 };
 const images = () => {
-  return (
-    gulp
-      .src('./dev/img/*')
-      //.pipe(imagemin())
-      .pipe(gulp.dest('./build/img'))
-  );
+  return gulp
+    .src('./dev/img/*')
+    .pipe(
+      imagemin({
+        verbose: true,
+      })
+    )
+    .pipe(gulp.dest('./build/img'));
 };
 const svg = () => {
   return gulp
@@ -113,6 +99,26 @@ const svg = () => {
       })
     )
     .pipe(gulp.dest('./build/img'));
+};
+
+// gulp.task("watch", function () {
+//   watch("./dev/index.html", gulp.parallel(browserSync.reload));
+// });
+
+// gulp.task("server", function () {
+//   browserSync.init({
+//     server: {
+//       baseDir: "./dev/",
+//     },
+//   });
+// });
+
+const watchAll = () => {
+  gulp.watch('./dev/pug/**/*.pug', html);
+  gulp.watch('./dev/styles/**/*.scss', styles);
+  gulp.watch('./dev/scripts/**/*.js', scripts);
+  gulp.watch('./dev/img/*.svg', svg);
+  gulp.watch('./dev/img/*', images);
 };
 
 exports.dev = gulp.series(

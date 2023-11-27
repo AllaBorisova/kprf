@@ -1,0 +1,44 @@
+main.main
+	.container
+		.breadcrumbs 
+			ul 
+				li 
+					a Главная 
+				li Реготделение
+	.about-block.about-block_rukovodstvo
+		.container 
+			.h2.h2_border Руководство
+			.about-block__persons 
+				- for (var x = 0; x < 5; x++)
+					.about-block__person.person
+						.person__img(style="background-image:url(../img/natali.png)")
+						.person__desc 
+							.person__name Барышникова Наталья Геннадьевна
+							.person__text Первый секретарь Томского обкома КПРФ
+	.about-block.about-block_mestn
+		.container 
+			.h2.h2_border Местные отделения
+			.about-block__links
+				- for (var x = 0; x < 5; x++)
+					a.about-block__link(href="") Асиновский район
+						+svg('red-arrow')
+			.pagination 
+				ul
+					li
+						a.active(href="") 1
+					li
+						a(href="") 2
+					li
+						a(href="") 3
+					li
+						a(href="") 4
+					li
+						a(href="") 5
+					li
+						a(href="") 6
+					li
+						a(href="") 7
+					li
+						a(href="") 8
+					li
+						a(href="") 9

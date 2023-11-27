@@ -1,7 +1,9 @@
 .main-slider {
   margin-bottom: 16rem;
+  margin-top: 5rem;
   @media (max-width: 767px) {
     margin-bottom: 6rem;
+    margin-top: 0;
   }
   &__slide {
     @include bg-img;
@@ -344,5 +346,132 @@
       margin-bottom: 4rem;
       font-size: 1.6rem;
     }
+  }
+}
+.about-block {
+  margin-bottom: 26rem;
+  position: relative;
+  @media (max-width: 767px) {
+    margin-bottom: 10rem;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    color: rgba(63, 55, 64, 0.03);
+    font-family: $font-second;
+    font-size: 43.8rem;
+    font-weight: 400;
+    line-height: normal;
+    top: -22.5rem;
+    left: -13rem;
+    z-index: -1;
+    white-space: nowrap;
+    @media (max-width: 767px) {
+      font-size: 20rem;
+      top: -10rem;
+      left: -6rem;
+    }
+  }
+  &_mestn {
+    &:before {
+      content: 'Местные отделения';
+    }
+  }
+  &_rukovodstvo {
+    &:before {
+      content: 'Руководство';
+    }
+  }
+  &_program {
+    &:before {
+      content: 'Программа';
+    }
+  }
+  &_ustav {
+    &:before {
+      content: 'Устав';
+    }
+  }
+  &_how {
+    &:before {
+      content: 'Как вступить?';
+    }
+  }
+  &_spravka {
+    &:before {
+      content: 'Справка';
+    }
+  }
+  &__text {
+    color: #3f3740;
+
+    font-family: Ubuntu;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    p:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  &__persons {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    @media (max-width: 767px) {
+      gap: 3rem;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    @media (max-width: 767px) {
+      gap: 1.5rem;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    @include tr;
+    svg {
+      width: 1.2rem;
+      height: 2rem;
+    }
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+.person {
+  @include flex-center-start;
+  gap: 5rem;
+  @media (max-width: 767px) {
+    gap: 3rem;
+    flex-direction: column;
+  }
+  &__img {
+    width: 20.6rem;
+    height: 20.6rem;
+    @include bg-img;
+    flex: none;
+  }
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__name {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &__text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
   }
 }
