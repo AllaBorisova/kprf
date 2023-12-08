@@ -60,7 +60,9 @@
     &_menu {
       border-radius: 3.1rem;
       background: rgba(63, 55, 64, 0.03);
-      padding: 2.5rem 3.4rem;
+      // padding: 2.5rem 3.4rem;
+      padding: 1.5rem;
+      padding-left: 3.5rem;
       @media (max-width: 992px) {
         padding: 0;
         background: none;
@@ -119,6 +121,21 @@
   .search {
     @media (max-width: 992px) {
       display: none;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%;
+    color: $color-primary;
+    margin-left: auto;
+    svg {
+      width: 0.9rem;
+      height: 1.5rem;
     }
   }
 }

@@ -288,7 +288,7 @@
   }
 }
 .section-links {
-  margin-bottom: 15rem;
+  margin: 25rem 0;
   @media (max-width: 767px) {
     margin-bottom: 7rem;
   }
@@ -305,18 +305,19 @@
 .section-link {
   height: 9.8rem;
   border-radius: 2rem;
-  background: rgba(200, 6, 27, 0.06);
-  font-size: 3rem;
-  line-height: 1;
+  background: rgba(86, 72, 88, 0.03);
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 135%;
   padding: 2.5rem 1.9rem;
-  color: $color-primary;
+  color: $color-text;
   display: flex;
-  align-items: flex-end;
-  font-family: $font-second;
+  align-items: center;
+  justify-content: center;
   @include tr;
   svg {
-    width: 1.1rem;
-    height: 1.7rem;
+    width: 1rem;
+    height: 1.6rem;
   }
   &:hover {
     opacity: 0.8;

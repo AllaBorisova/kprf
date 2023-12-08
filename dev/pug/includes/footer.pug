@@ -8,11 +8,6 @@ footer.footer
 				.footer__address 634050 Томск, ул. Крылова, стр. 4/1 
 				a.footer__mail(href="mailto:kommunist-tomsk@mail.ru") kommunist-tomsk@mail.ru
 				a.footer__phone(href="tel:+7 (3822) 46-82-10") +7 (3822) 46-82-10
-			.search 
-				form.search__form(action="" method="get")
-					button.search__button(type="submit")
-						+svg('loupe')
-					input.search__input(type="text" value="") 
 			.socials 
 				a(href="" target="_blank")
 					+svg('tg')
@@ -22,6 +17,12 @@ footer.footer
 					+svg('ok')
 				a(href="" target="_blank")
 					+svg('vk')
+			.search 
+				form.search__form(action="" method="get")
+					button.search__button(type="submit")
+						+svg('loupe')
+					input.search__input(type="text" value="") 
+			
 		.footer__bottom
 			.footer__column
 				.footer__caption О партии
