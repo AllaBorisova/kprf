@@ -1,0 +1,55 @@
+main.main
+	.container
+		.breadcrumbs 
+			ul 
+				li 
+					a Главная 
+				li 
+					a Реготделение
+				li Барышникова Наталья Геннадьевна
+		.otdelenie 
+			.otdelenie__img(style="background-image:url(./img/natashka.png)")
+			.otdelenie__text
+				.otdelenie__district Асиновский район
+				.otdelenie__person Барышникова Наталья Геннадьевна 
+				.otdelenie__address г. Асино, ул. Ивана Буева, 15а
+				.otdelenie__phone 8-923-401-97-14
+				.otdelenie__mail mikk.gaina50@yandex.ru
+.section
+		.container 
+			.section__items.section__items_4
+				- for (var x = 0; x < 12; x++)
+					a.section-item(href="")
+						.section-item__img(style="background-image:url(../img/section-photo1.png)") 
+							.section-item__date 29 мая 2023
+						.section-item__name В Подмосковье прошёл VI (майский) Пленум Центрального Комитета и ЦКРК КПРФ
+						.section-item__text 27 мая 2023 года состоялся очередной VI (майский) Пленум Центрального Комитета и Центральной Контрольно-Ревизионной Комиссии КПРФ.
+.section-internet 
+		.container 
+			.h2.section-internet__title Интернет-приемная
+			.section-internet__text Если вы хотите быть в курсе важных событий реготделения, обратиться за помощью к депутату КПРФ  или вступить в партию, заполните соответствующую форму ниже:
+			.tabs 
+				ul 
+					li 
+						span Подписаться на новости
+						+svg('icon-tab1')
+					li 
+						span Обратиться к депутату
+						+svg('icon-tab2')
+					li 
+						span Вступить в КПРФ
+						+svg('icon-tab3')
+				div 
+					div 
+						form(action="" method="")
+							.form 
+								.form__block 
+									input.form__input(type="text" placeholder="ФИО")
+								.form__block 
+									input.form__input(type="tel" placeholder="Телефон")
+								.form__block 
+									input.form__input(type="email" placeholder="E-mail")
+								textarea.form__textarea(placeholder="Текст сообщения")
+								input.form__submit(type="submit" value="Отправить")
+					div 
+					div
