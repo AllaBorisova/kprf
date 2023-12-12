@@ -2,9 +2,9 @@
   display: block;
   position: relative;
   max-width: 21rem;
-  // @media (max-width: 767px) {
-  //   max-width: calc(46% - 1rem);
-  // }
+  @media (max-width: 767px) {
+    max-width: 11.3rem;
+  }
 }
 .bg-menu {
   position: fixed;
@@ -17,6 +17,9 @@
   display: none;
   .open-menu & {
     display: block;
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 }
 .hamburger {
@@ -38,14 +41,22 @@
   }
 
   .hamburger-box {
-    width: 2.4rem;
+    width: 1.8rem;
   }
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
-    width: 2.4rem;
+    width: 1.8rem;
     // height: 0.1rem;
-    background: $color-primary;
+    background: #3b333c;
+    border-radius: 0;
+    height: 2px;
+  }
+  .hamburger-inner::before {
+    top: -6px;
+  }
+  .hamburger-inner::after {
+    bottom: -6px;
   }
 }
 .header {
@@ -67,7 +78,7 @@
     gap: 5rem;
 
     @media (max-width: 992px) {
-      gap: 1rem;
+      gap: 2rem;
       justify-content: space-between;
     }
     &_menu {
@@ -85,8 +96,8 @@
     }
   }
   @media (max-width: 767px) {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   &__text {
     font-size: 2.2rem;
@@ -94,8 +105,8 @@
     line-height: 130%;
     max-width: 21rem;
     @media (max-width: 992px) {
-      max-width: calc(50% - 1rem);
-      font-size: 1.6rem;
+      // max-width: calc(50% - 1rem);
+      font-size: 1.4rem;
     }
   }
   &__contacts {
@@ -166,6 +177,19 @@
     @media (max-width: 992px) {
       display: block;
       margin-bottom: 1rem;
+      font-size: 1.6rem;
+      line-height: 145%;
+      .header__address,
+      .header__mail {
+        font-size: 16px;
+        display: block;
+        line-height: 145%;
+      }
+      .header__phone {
+        font-size: 18px;
+        font-weight: 500;
+        display: block;
+      }
     }
   }
   .header__link,
@@ -210,10 +234,10 @@
         padding-top: 3.5rem;
         display: none;
         @media (max-width: 992px) {
-          display: block;
+          // display: block;
           position: static;
-          margin-left: 2rem;
-          padding-top: 2rem;
+          margin: 0;
+          padding-top: 2.8rem;
         }
         > ul {
           @include ul-clean;
@@ -279,26 +303,81 @@
     .socials,
     .search {
       display: none;
+      @media (max-width: 992px) {
+        display: flex;
+      }
+    }
+    @media (max-width: 992px) {
+      .search {
+        margin-bottom: 2.9rem;
+      }
+      .search,
+      .search__input,
+      .search__form {
+        width: 100%;
+      }
+      .socials {
+        margin: 2.9rem 0;
+        justify-content: space-between;
+      }
     }
   }
   @media (max-width: 992px) {
     .nav-menu {
       display: block;
-      width: 30rem;
+      width: 100vw;
+      min-height: 100vh;
+
       position: absolute;
-      right: 0px;
+      left: -2rem;
       background: #fff;
       padding: 3rem 2rem;
-      box-shadow: 0.5rem 0 2.5rem rgba(34, 42, 52, 0.12);
-      top: 0px;
+      // box-shadow: 0.5rem 0 2.5rem rgba(34, 42, 52, 0.12);
+      top: 0rem;
       z-index: 3;
       ul {
         flex-direction: column;
         align-items: flex-start;
-        a {
-          white-space: normal;
-          color: $color-text;
+        li {
+          width: 100%;
+          &:not(:last-child) {
+            border-bottom: 1px solid rgba(59, 51, 60, 0.1);
+            padding-bottom: 2.9rem;
+          }
+          a {
+            white-space: normal;
+            color: $color-text;
+            font-size: 22px;
+            font-family: $font-second;
+
+            line-height: 135%;
+            justify-content: space-between;
+            svg {
+              width: 1.5rem;
+              height: 1.6rem;
+            }
+          }
+          .sub-menu-inner {
+            ul {
+              li {
+                padding-bottom: 0;
+                border: none;
+                a {
+                  font-size: 2.2rem;
+                  font-weight: 400;
+                  line-height: normal;
+                  font-family: $font;
+                }
+              }
+            }
+          }
         }
+      }
+      .header__link {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 135%;
+        margin-top: 2.9rem;
       }
     }
   }

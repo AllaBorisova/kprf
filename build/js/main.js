@@ -5,11 +5,15 @@ jQuery(document).ready(function ($) {
 
   $('[type=tel]').mask('+7 (999) 999-99-99');
 
-  $('.sub-menu-link').click(function (e) {
+  $('.sub-menu-link > a').click(function (e) {
     e.preventDefault();
-    $('.sub-menu-link').removeClass('open');
-    $(this).addClass('open');
-    $('body').addClass('open-menu');
+    if ($(this).parent().hasClass('open')) {
+      $('.sub-menu-link').removeClass('open');
+    } else {
+      $('.sub-menu-link').removeClass('open');
+      $(this).parent().addClass('open');
+      $('body').addClass('open-menu');
+    }
   });
 
   // window.addEventListener('click', function (e) {

@@ -16,11 +16,12 @@ header.header
 					span.hamburger-inner
 		.header__row.header__row_menu
 			nav.nav-menu
-				.header__contacts 
-					.header__address 634050 Томск, ул. Крылова, стр. 4/1 
-					a.header__mail(href="mailto:kommunist-tomsk@mail.ru") kommunist-tomsk@mail.ru
-					a.header__phone(href="tel:+7 (3822) 46-82-10") +7 (3822) 46-82-10
-				a.header__link(href="") Интернет-приемная
+				
+				.search 
+					form.search__form(action="" method="get")
+						button.search__button(type="submit")
+							+svg('loupe')
+						input.search__input(type="text" value="") 
 				ul 
 					li.sub-menu-link
 						a(href="") О партии
@@ -43,6 +44,8 @@ header.header
 						.sub-menu-inner
 							+list-links('Видео', 'Фото', 'Библиотека')
 				
+				a.header__link(href="") Интернет-приемная
+					+svg('red-arrow')
 				.socials 
 					a(href="" target="_blank")
 						+svg('tg')
@@ -52,11 +55,11 @@ header.header
 						+svg('ok')
 					a(href="" target="_blank")
 						+svg('vk')
-				.search 
-					form.search__form(action="" method="get")
-						button.search__button(type="submit")
-							+svg('loupe')
-						input.search__input(type="text" value="") 
+				.header__contacts 
+					.header__address 634050 Томск, ул. Крылова, стр. 4/1 
+					a.header__mail(href="mailto:kommunist-tomsk@mail.ru") kommunist-tomsk@mail.ru
+					a.header__phone(href="tel:+7 (3822) 46-82-10") +7 (3822) 46-82-10
+				
 			.socials 
 				a(href="" target="_blank")
 					+svg('tg')
