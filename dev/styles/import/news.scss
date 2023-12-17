@@ -10,7 +10,7 @@
     @media (max-width: 992px) {
       align-items: flex-start;
     }
-    @media (max-width: 767px) {
+    @media (max-width: $breakpoint-mobile) {
       flex-direction: column-reverse;
       gap: 2rem;
     }
@@ -29,7 +29,7 @@
   //       grid-template-columns: repeat(2, 1fr);
   //     }
   //   }
-  //   @media (max-width: 767px) {
+  //   @media (max-width: $breakpoint-mobile) {
   //     grid-template-columns: repeat(2, 1fr);
   //     &_three {
   //       grid-template-columns: repeat(1, 1fr);
@@ -116,7 +116,7 @@
       background-repeat: no-repeat;
       margin-bottom: 4rem;
       height: 45.8rem;
-      @media (max-width: 767px) {
+      @media (max-width: $breakpoint-mobile) {
         margin-bottom: 3.5rem;
         height: 32rem;
       }
@@ -125,7 +125,7 @@
       font-size: 1.8rem;
       font-weight: 400;
       line-height: 1.5;
-      @media (max-width: 767px) {
+      @media (max-width: $breakpoint-mobile) {
       }
       p:not(:last-child) {
         margin-bottom: 2.8rem;
@@ -144,7 +144,7 @@
         a {
           font-style: italic;
         }
-        @media (max-width: 767px) {
+        @media (max-width: $breakpoint-mobile) {
           padding: 2rem;
           font-size: 1.8rem;
         }
@@ -155,7 +155,7 @@
         font-weight: bold;
         line-height: 1.5;
         margin-bottom: 2rem;
-        @media (max-width: 767px) {
+        @media (max-width: $breakpoint-mobile) {
           font-size: 2rem;
           margin-bottom: 1.5rem;
         }
@@ -165,7 +165,7 @@
         margin-bottom: 3.6rem;
         list-style: none;
         counter-reset: item;
-        @media (max-width: 767px) {
+        @media (max-width: $breakpoint-mobile) {
           margin-bottom: 1.8rem;
         }
         li {
@@ -177,7 +177,7 @@
             margin-bottom: 1rem;
           }
 
-          @media (max-width: 767px) {
+          @media (max-width: $breakpoint-mobile) {
           }
           &:before {
             content: counter(item) '.';
@@ -188,7 +188,7 @@
       ul {
         @include ul-clean;
         margin-bottom: 3.6rem;
-        @media (max-width: 767px) {
+        @media (max-width: $breakpoint-mobile) {
           margin-bottom: 1.8rem;
         }
         li {
@@ -197,7 +197,7 @@
           &:not(:last-child) {
             margin-bottom: 1rem;
           }
-          @media (max-width: 767px) {
+          @media (max-width: $breakpoint-mobile) {
             padding-left: 2rem;
           }
           &:before {

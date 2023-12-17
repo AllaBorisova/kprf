@@ -2,7 +2,10 @@
   display: block;
   position: relative;
   max-width: 21rem;
-  @media (max-width: 767px) {
+  @media (max-width: $breakpoint-tablet) {
+    max-width: 13.4rem;
+  }
+  @media (max-width: $breakpoint-mobile) {
     max-width: 11.3rem;
   }
 }
@@ -17,7 +20,7 @@
   display: none;
   .open-menu & {
     display: block;
-    @media (max-width: 767px) {
+    @media (max-width: $breakpoint-tablet) {
       display: none;
     }
   }
@@ -31,7 +34,7 @@
   // top: 1.5rem;
   // right: 2rem;
   z-index: 999;
-  @media (max-width: 992px) {
+  @media (max-width: $breakpoint-tablet) {
     @include flexcc;
   }
 
@@ -69,7 +72,7 @@
     display: flex;
     flex-direction: column;
     gap: 2.9rem;
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       gap: 0;
     }
   }
@@ -77,9 +80,12 @@
     @include flex-center-start;
     gap: 5rem;
 
-    @media (max-width: 992px) {
-      gap: 2rem;
+    @media (max-width: $breakpoint-tablet) {
+      gap: 3.2rem;
       justify-content: space-between;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      gap: 2rem;
     }
     &_menu {
       border-radius: 3.1rem;
@@ -89,13 +95,13 @@
       padding-left: 3.5rem;
       position: relative;
       z-index: 999;
-      @media (max-width: 992px) {
+      @media (max-width: $breakpoint-tablet) {
         padding: 0;
         background: none;
       }
     }
   }
-  @media (max-width: 767px) {
+  @media (max-width: $breakpoint-mobile) {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
@@ -104,14 +110,14 @@
     font-weight: 400;
     line-height: 130%;
     max-width: 21rem;
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       // max-width: calc(50% - 1rem);
       font-size: 1.4rem;
     }
   }
   &__contacts {
     max-width: 34rem;
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-mobile) {
       display: none;
     }
   }
@@ -134,18 +140,18 @@
   }
   .button {
     margin-left: auto;
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       display: none;
     }
   }
   .socials {
     margin-left: auto;
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       display: none;
     }
   }
   .search {
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       display: none;
     }
   }
@@ -163,18 +169,18 @@
       width: 0.9rem;
       height: 1.5rem;
     }
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       display: none;
     }
   }
 }
 .nav-menu {
-  @media (max-width: 992px) {
+  @media (max-width: $breakpoint-tablet) {
     display: none;
   }
   .header__contacts {
     display: none;
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       display: block;
       margin-bottom: 1rem;
       font-size: 1.6rem;
@@ -196,7 +202,7 @@
   .socials,
   .search {
     display: none;
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       display: flex;
       margin: 1rem 0;
     }
@@ -233,7 +239,7 @@
         margin-left: -3.4rem;
         padding-top: 3.5rem;
         display: none;
-        @media (max-width: 992px) {
+        @media (max-width: $breakpoint-tablet) {
           // display: block;
           position: static;
           margin: 0;
@@ -250,7 +256,7 @@
           // border-radius: 2rem;
           // border: 1px solid rgba(63, 55, 64, 0.1);
           // background: #fff;
-          @media (max-width: 992px) {
+          @media (max-width: $breakpoint-tablet) {
             border: none;
             padding: 0;
           }
@@ -285,7 +291,7 @@
       color: $color-primary;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       font-size: 1.6rem;
     }
   }
@@ -303,11 +309,11 @@
     .socials,
     .search {
       display: none;
-      @media (max-width: 992px) {
+      @media (max-width: $breakpoint-tablet) {
         display: flex;
       }
     }
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       .search {
         margin-bottom: 2.9rem;
       }
@@ -318,11 +324,16 @@
       }
       .socials {
         margin: 2.9rem 0;
+        justify-content: flex-start;
+      }
+    }
+    @media (max-width: $breakpoint-mobile) {
+      .socials {
         justify-content: space-between;
       }
     }
   }
-  @media (max-width: 992px) {
+  @media (max-width: $breakpoint-tablet) {
     .nav-menu {
       display: block;
       width: 100vw;
@@ -379,6 +390,16 @@
         line-height: 135%;
         margin-top: 2.9rem;
       }
+    }
+  }
+  @media (max-width: $breakpoint-tablet) {
+    .nav-menu {
+      padding: 3rem 4rem;
+    }
+  }
+  @media (max-width: $breakpoint-mobile) {
+    .nav-menu {
+      padding: 3rem 2rem;
     }
   }
 }

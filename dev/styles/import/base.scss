@@ -16,7 +16,7 @@ html {
   @media (max-width: 1240px) {
     font-size: 7px;
   }
-  @media (max-width: 992px) {
+  @media (max-width: $breakpoint-tablet) {
     font-size: 10px;
   }
 }
@@ -48,7 +48,7 @@ body {
   line-height: 1.4;
   min-height: 100vh;
 
-  @media (max-width: 767px) {
+  @media (max-width: $breakpoint-mobile) {
     font-size: 1.4rem;
     line-height: 1.2;
   }
@@ -102,6 +102,12 @@ textarea {
   max-width: 127.4rem;
   padding: 0 2rem;
   margin: 0 auto;
+  @media (max-width: $breakpoint-tablet) {
+    padding: 0 4rem;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 2rem;
+  }
 }
 
 .page-flex {
@@ -135,7 +141,7 @@ textarea {
   svg {
     width: 1.8rem;
     height: 2.8rem;
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       height: 2rem;
     }
   }
@@ -155,25 +161,25 @@ textarea {
     }
   }
 
-  @media (max-width: 992px) {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    &_border {
-      padding-bottom: 3rem;
-      margin-bottom: 3rem;
-    }
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 2.8rem;
+    // margin-bottom: 2rem;
+    // &_border {
+    //   padding-bottom: 3rem;
+    //   margin-bottom: 3rem;
+    // }
   }
 }
 .main {
   flex: 1;
   overflow: hidden;
   p {
-    font-size: 1.8rem;
-    line-height: 1.5;
-    @media (max-width: 767px) {
-      font-size: 1.4rem;
-      line-height: 1.2;
-    }
+    font-size: 2.2rem;
+    line-height: 135%;
+    // @media (max-width: $breakpoint-mobile) {
+    //   font-size: 1.4rem;
+    //   line-height: 1.2;
+    // }
   }
 }
 
@@ -181,7 +187,7 @@ textarea {
   line-height: 1em;
 
   padding-bottom: 15rem;
-  @media (max-width: 767px) {
+  @media (max-width: $breakpoint-tablet) {
     padding-top: 3rem;
     padding-bottom: 5rem;
   }
@@ -202,8 +208,8 @@ textarea {
       display: none;
       width: 0 !important;
     }
-    @media (max-width: 767px) {
-      gap: 1rem;
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1.6rem;
     }
     li {
       white-space: nowrap;
@@ -245,10 +251,13 @@ textarea {
     margin-bottom: 8rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    @media (max-width: 767px) {
-      margin-bottom: 2rem;
-      gap: 1rem;
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: 1fr;
     }
+    // @media (max-width: $breakpoint-mobile) {
+    //   margin-bottom: 2rem;
+    //   gap: 1rem;
+    // }
 
     &::-webkit-scrollbar {
       display: none;
@@ -274,9 +283,9 @@ textarea {
       svg {
         max-width: 6.4rem;
         max-height: 4.7rem;
-        @media (max-width: 767px) {
-          display: none;
-        }
+        // @media (max-width: $breakpoint-mobile) {
+        //   display: none;
+        // }
       }
       &.active,
       &:hover {
@@ -286,25 +295,26 @@ textarea {
           @include filter-to-white;
         }
       }
-      @media (max-width: 992px) {
+      @media (max-width: $breakpoint-tablet) {
         // width: 50%;
+        border-radius: 3rem;
       }
-      @media (max-width: 767px) {
-        padding: 1rem 2rem;
-        font-size: 1.6rem;
-        border-radius: 2rem;
-      }
+      // @media (max-width: $breakpoint-mobile) {
+      //   padding: 1rem 2rem;
+      //   font-size: 1.6rem;
+      //   border-radius: 2rem;
+      // }
     }
   }
   > div {
-    @media (max-width: 767px) {
-      padding: 2rem;
-      font-size: 1.4rem;
-      line-height: 1.2;
-    }
+    // @media (max-width: $breakpoint-mobile) {
+    //   padding: 2rem;
+    //   font-size: 1.4rem;
+    //   line-height: 1.2;
+    // }
     p {
       margin-bottom: 1rem;
-      @media (max-width: 767px) {
+      @media (max-width: $breakpoint-mobile) {
         margin-bottom: 0.8rem;
       }
     }
@@ -323,7 +333,7 @@ textarea {
         font-size: 1.8rem;
         line-height: 2.5rem;
 
-        @media (max-width: 767px) {
+        @media (max-width: $breakpoint-mobile) {
           font-size: 1.4rem;
           line-height: 1.2em;
         }
@@ -368,7 +378,7 @@ textarea {
   &.slick-current {
     opacity: 1;
   }
-  @media (max-width: 992px) {
+  @media (max-width: $breakpoint-tablet) {
     margin: 0;
   }
 }
@@ -418,9 +428,48 @@ textarea {
   margin-right: -60rem;
   background: url(../img/arrow-right.svg) center no-repeat;
 }
+.slick-prev-main {
+  width: 34px;
+  height: 34px;
+  margin-left: 0;
+  left: -1.7rem;
+  border-radius: 50%;
+  border: 1px solid $color-primary;
+  background: #fff;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.7rem;
+  z-index: 5;
+  @include flexcc;
+  svg {
+    width: 12px;
+    height: 18.667px;
+    transform: rotate(-180deg);
+  }
+}
+.slick-next-main {
+  width: 34px;
+  height: 34px;
+  margin-right: 0;
+  right: -1.7rem;
+  border-radius: 50%;
+  border: 1px solid $color-primary;
+  background: #fff;
+  padding: 0;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  margin-top: -1.7rem;
+  @include flexcc;
+  svg {
+    width: 12px;
+    height: 18.667px;
+  }
+}
 .pagination {
   margin-top: 10rem;
-  @media (max-width: 767px) {
+  @media (max-width: $breakpoint-mobile) {
     margin-top: 5rem;
   }
   ul {

@@ -8,7 +8,10 @@
   }
   &__block {
     margin-bottom: 5rem;
-    @media (max-width: 767px) {
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 3rem;
+    }
+    @media (max-width: $breakpoint-mobile) {
       margin-bottom: 1.5rem;
     }
   }
@@ -21,13 +24,13 @@
     border-radius: 2rem;
     border: 1px solid rgba(63, 55, 64, 0.3);
     background: #fff;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     &::placeholder {
       color: rgba(63, 55, 64, 0.4);
     }
-    @media (max-width: 767px) {
-      height: 4rem;
-      font-size: 1.6rem;
+    @media (max-width: $breakpoint-mobile) {
+      // height: 4rem;
+      // font-size: 1.6rem;
       border-radius: 1.5rem;
     }
   }
@@ -40,13 +43,13 @@
     border-radius: 2rem;
     border: 1px solid rgba(63, 55, 64, 0.3);
     background: #fff;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     &::placeholder {
       color: rgba(63, 55, 64, 0.4);
     }
-    @media (max-width: 767px) {
+    @media (max-width: $breakpoint-mobile) {
       height: 20rem;
-      font-size: 1.6rem;
+
       border-radius: 1.5rem;
     }
   }

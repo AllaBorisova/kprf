@@ -16,6 +16,11 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  $('.footer__caption').click(function (e) {
+    e.preventDefault();
+    $(this).parent().toggleClass('open');
+  });
+
   // window.addEventListener('click', function (e) {
   //   if (!menu.contains(e.target) && !button.contains(e.target)) {
   //     // Ниже код, который нужно выполнить при срабатывании события.
@@ -48,11 +53,15 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 768,
         settings: {
-          arrows: false,
+          arrows: true,
           centerMode: false,
 
           slidesToShow: 1,
           variableWidth: false,
+          prevArrow:
+            '<button type="button" class="slick-prev-main"><svg><use xlink:href="./img/sprite.svg#red-arrow"></use></svg></button>',
+          nextArrow:
+            '<button type="button" class="slick-next-main"><svg><use xlink:href="./img/sprite.svg#red-arrow"></use></svg></button>',
         },
       },
     ],

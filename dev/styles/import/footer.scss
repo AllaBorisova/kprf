@@ -1,21 +1,33 @@
 .footer {
   background: #fafafa;
+  @media (max-width: $breakpoint-tablet) {
+    background: #fff;
+  }
   &__top {
     padding-top: 5rem;
     padding-bottom: 5rem;
     @include flex-center-start;
     gap: 1rem;
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       flex-wrap: wrap;
+      gap: 2rem;
     }
   }
   .logo {
     max-width: 17.6rem;
     margin-right: 5rem;
 
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       margin-right: 0;
       max-width: 100%;
+      max-width: 13.4rem;
+    }
+  }
+  @media (max-width: $breakpoint-tablet) {
+    .socials {
+      flex-wrap: wrap;
+      max-width: 8rem;
+      gap: 2rem;
     }
   }
 
@@ -25,6 +37,11 @@
     line-height: 130%;
     max-width: 21rem;
     margin-right: 5rem;
+    @media (max-width: $breakpoint-tablet) {
+      margin-right: 0;
+      font-size: 1.6rem;
+      max-width: 15rem;
+    }
   }
   &__contacts {
     max-width: 34rem;
@@ -49,7 +66,10 @@
   }
   .search {
     margin-left: auto;
-    @media (max-width: 767px) {
+    @media (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+    @media (max-width: $breakpoint-mobile) {
       margin-left: 0;
     }
   }
@@ -59,13 +79,18 @@
     display: flex;
     align-items: flex-start;
     gap: 15rem;
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-tablet) {
       flex-wrap: wrap;
       gap: 3rem;
       padding-bottom: 5rem;
+      flex-direction: column;
     }
   }
   &__column {
+    @media (max-width: $breakpoint-tablet) {
+      width: 100%;
+      border-bottom: 1px solid rgba(59, 51, 60, 0.1);
+    }
   }
   &__caption {
     font-size: 3.8rem;
@@ -73,6 +98,27 @@
     line-height: normal;
     margin-bottom: 1.5rem;
     font-family: $font-second;
+    svg {
+      display: none;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 22px;
+
+      padding-bottom: 2.9rem;
+      margin-bottom: 0rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      svg {
+        display: block;
+        width: 1.5rem;
+        height: 1.6rem;
+        @include tr;
+        .open & {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
   &__menu {
     ul {
@@ -80,12 +126,23 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      @media (max-width: $breakpoint-tablet) {
+        display: none;
+        .open & {
+          display: flex;
+          padding-bottom: 2.9rem;
+        }
+      }
       li {
         a {
           font-size: 2.4rem;
           font-weight: 400;
           line-height: normal;
           color: $color-text;
+          @media (max-width: $breakpoint-tablet) {
+            font-size: 2.2rem;
+            gap: 2rem;
+          }
         }
       }
     }
